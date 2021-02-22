@@ -11,5 +11,6 @@ jobs:
     steps:
       - name: Get repository & do
         uses: actions/checkout@v2
+      - name: Do thing
         run: .\win.ps1
         shell: powershell
