@@ -1,0 +1,15 @@
+name: (selfhosted) Linux Shell Gang
+
+on:
+  push:
+    tags:
+      - 'j*'
+
+jobs:
+  Heeho:
+    runs-on: jabba
+    steps:
+      - name: Get repository
+        uses: actions/checkout@v2
+      - name: Script time
+        run: ./do.sh $(which bash)
