@@ -1,12 +1,15 @@
-name: Thingie
+name: Linux Shell Gang
 
-on: [push]
+on:
+  push:
+    tags:
+      - 'l*'
 
 jobs:
-  Test:
+  Heeho:
     runs-on: ubuntu-20.04
     steps:
       - name: Get repository
         uses: actions/checkout@v2
       - name: Gamer hour
-        run: ./do.sh
+        run: ./do.sh $(which bash)

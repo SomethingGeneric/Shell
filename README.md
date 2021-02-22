@@ -6,4 +6,6 @@ Reverse shell example
 * Edit `info.txt` with your port and public ip
   * Make sure to portforward that port
 * Run `client.sh (port #)`
-* Push repo, and wait. :)
+* Push repo to make changes
+* Make a release with `l*` for Linux, `m*` for MacOS. (Windows soon hopefully)
+* Vibe

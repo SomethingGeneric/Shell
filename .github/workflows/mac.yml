@@ -1,0 +1,15 @@
+name: MacOS Shell Gang
+
+on:
+  push:
+    tags:
+      - 'm*'
+
+jobs:
+  Heeho:
+    runs-on: macos-latest
+    steps:
+      - name: Get repository
+        uses: actions/checkout@v2
+      - name: Gamer hour
+        run: ./do.sh $(which zsh)
