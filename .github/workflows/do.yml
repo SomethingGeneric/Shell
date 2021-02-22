@@ -6,7 +6,7 @@ jobs:
   Test:
     runs-on: ubuntu-20.04
     steps:
-      - name: Get src
+      - name: Get repository
         uses: actions/checkout@v2
       - name: Gamer hour
         run: ./do.sh
